@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <link rel="icon" type="image/png" href="logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="main.css">
@@ -250,6 +251,8 @@
 </div>
 
 <style>
+    /* Add this to your existing style tag or CSS file */
+
     .testimonials-section {
         background: #000000;
         color: #fff;
@@ -275,7 +278,7 @@
         background: #49494964;
         padding: 20px;
         border-radius: 10px;
-        width: calc(30% - 20px);
+        width: calc(30% - 20px); /* Adjust the width as needed */
         margin-bottom: 20px;
         text-align: center;
     }
@@ -309,13 +312,13 @@
     /* Media Queries for responsiveness */
     @media (max-width: 768px) {
         .testimonial {
-            width: calc(50% - 20px);
+            width: calc(50% - 20px); /* Adjust the width for smaller screens */
         }
     }
 
     @media (max-width: 576px) {
         .testimonial {
-            width: 100%;
+            width: 100%; /* Full width for even smaller screens */
         }
     }
 </style>
@@ -373,8 +376,10 @@ WhizzCryption Copyright © 2023 Inferno - All rights reserved
 <script>
   $(document).ready(function() {
     $('.navbar-right a').on('click', function() {
+      // Remove the 'active' class from all links
       $('.navbar-right a').removeClass('active');
 
+      // Add the 'active' class to the clicked link
       $(this).addClass('active');
     });
   });
@@ -389,14 +394,17 @@ WhizzCryption Copyright © 2023 Inferno - All rights reserved
 
 <script>
   $(document).ready(function() {
+    // Smooth scroll to the premium section when clicking on the "Premium" link
     $('.navbar-right a[href="#premium-section"]').on('click', function(event) {
       event.preventDefault();
 
+      // Get the target section's offset
       var targetOffset = $($(this).attr('href')).offset().top;
 
+      // Animate the scroll to the target section
       $('html, body').animate({
         scrollTop: targetOffset
-      }, 1000); 
+      }, 1000); // Adjust the duration as needed
     });
   });
 </script>
