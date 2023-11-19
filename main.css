@@ -1,0 +1,569 @@
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: auto;
+  overflow-x: hidden;
+  /* background-color:  #bdcbe2; */
+  /* background-color: #3498db; */
+  font-family: 'Roboto', sans-serif;
+  background: black;
+}
+
+.hero-section{
+  margin-top: 120px;
+  /* color: wheat; */
+  margin-top: 140px;
+  color:  #c57dff;
+  text-align: center;
+  /* font-size: 20px; */
+}
+.PremiumQuote{
+  color: white;
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: #333; Dark background color */
+  background: rgb(213,163,255);
+  background: linear-gradient(90deg,rgba(213,163,255,1) 35%, rgba(119,165,248,1) 100%);
+  padding: 15px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-left img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.navbar-left h1 {
+  color: #fff; /* Text color */
+  margin: 0;
+}
+
+.navbar-right {
+  display: flex;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  color: #fff; /* Text color */
+  margin: 0 15px;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff; /* Text color */
+}
+
+@media (max-width: 800px) {
+  .navbar-right {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px; /* Adjust as needed */
+      left: 0;
+      width: 100%;
+      background: #333; /* Dark background color */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-right.show {
+      display: flex;
+  }
+
+  .menu-icon {
+      display: block;
+  }
+}
+
+
+.navbar-right a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.navbar-right a.active {
+  color: #000000;
+  text-decoration: underline;
+}
+/* HERO---SECTION */
+.main_1 {
+  
+  margin-left: 18%;
+  margin-top: 8%;
+  margin-right: 5%;
+  flex-direction: row;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(27, 24, 24);
+  background: rgb(255, 255, 255);
+  /* background: linear-gradient(90deg, rgba(213,163,255,1) 35%, rgba(119,165,248,1) 100%); */
+  display: inline-flex;
+  width: 90%;
+  max-width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  border-bottom: 4px solid #c57dff;
+  border-right: 4px solid #c57dff;
+
+}
+
+.encrypt {
+  display: flex;
+  margin-left: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px;
+  height: 50px;
+  width: 90%;
+  max-width: 190px;
+  padding-left: 13px;
+  padding-right: 2px;
+  font-weight: bold;
+}
+
+.main_2 {
+  margin-left: 18%;
+  margin-top: 8%;
+  margin-right: 5%;
+  flex-direction: row;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(27, 24, 24);
+  background: rgb(255, 255, 255);
+  /* background: linear-gradient(90deg, rgba(213,163,255,1) 35%, rgba(119,165,248,1) 100%); */
+  display: inline-flex;
+  width: 90%;
+  max-width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  border-bottom: 4px solid #c57dff;
+  border-right: 4px solid #c57dff;
+
+}
+
+.decrypt {
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px;
+  height: 50px;
+  width: 90%;
+  max-width: 190px;
+  padding-left: 13px;
+  padding-right: 2px;
+  font-weight: bold;
+}
+
+/* Reset default button styles */
+button, input[type="file"] {
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.container_1 {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 90px;
+}
+
+#textbox {
+  padding: 10px;
+  color: #000000;
+  border: 1px solid #ffffff;
+  /* background-color:  rgba(119,165,248,1) ; */
+  background-color:  #e3dada;
+  border-radius: 5px;
+  width: auto;
+  margin-bottom: 20px;
+  max-width: 300px;
+}
+
+#enter-button {
+  background-color:  #c57dff;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#file-upload-label {
+  background-color:  #c57dff;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#file-upload {
+  display: none; /* Hide the actual file input element */
+}
+
+/* Hover effect for the Enter button and Upload File label */
+#enter-button:hover, #file-upload-label:hover {
+  background-color: #2079b0;
+}
+
+.up_button {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.or-text {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+/* Reset default button styles */
+button {
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.container_2 {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 90px; 
+}
+
+#textbox {
+  padding: 10px;
+  margin-top: 20%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 200px;
+  font-size: 15px;
+}
+/* background: rgb(213,163,255); */
+/* background: linear-gradient(90deg, rgba(213,163,255,1) 35%, rgba(119,165,248,1) 100%); */
+#download-button {
+  background-color: #c57dff;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Hover effect for the Download Result button */
+#download-button:hover {
+  background-color: #2079b0;
+}
+
+@media screen and (max-width: 768px) {
+  /* Apply these styles for screens with a width of 768px or less */
+  .main_1, .encrypt, .main_2, .decrypt {
+    flex-direction: column;
+    width: 90%;
+    max-width: none;
+    margin-left: 5%;
+  }
+  .main_1,.main_2{
+    margin-top: 30%;
+  }
+  .container_1,.container_2{
+    margin-left: 5px;
+  }
+
+}
+
+/* Add responsive styles for the new sections */
+
+/* Existing styles */
+
+.features-section {
+  background-color:black;
+  padding: 60px 20px;
+  width: auto;
+  margin-top: 200px;
+  text-align: center;
+}
+.features-section h2 {
+  color: #ffffff;
+}
+
+.feature {
+  margin-top: 40px;
+}
+
+.feature i {
+  font-size: 3em;
+  color: #D5A3FF;
+}
+
+.feature h3 {
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.feature p {
+  font-size: 1em;
+  color: #ffffff;
+}
+
+.cta-section {
+  background: rgb(213,163,255);
+background: linear-gradient(90deg, rgba(213,163,255,1) 35%, rgba(119,165,248,1) 100%);
+  color: #fff;
+  width: auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  background-color:#c57dff;
+  color: rgb(8, 8, 8);
+  padding: 15px 30px;
+  font-size: 1.2em;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #3e7df0;
+  color: #fff;
+}
+
+/* Existing styles */
+
+
+/* Footer CSS */
+
+
+.footer{
+  
+  background:#000;
+  padding:30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align:center;
+  }
+  
+  .footer .row{
+  width:100%;
+  margin:1% 0%;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.8em;
+  }
+  
+  .footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+  .footer .row a:hover{
+  color:#fff;
+  }
+  
+  .footer .row ul{
+  width:100%;
+  }
+  
+  .footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+  .footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
+  
+  @media (max-width:720px){
+  .footer{
+  text-align:left;
+  padding:5%;
+  }
+  .footer .row ul li{
+  display:block;
+  margin:10px 0px;
+  text-align:left;
+  }
+  .footer .row a i{
+  margin:0% 3%;
+  }
+  }
+
+
+
+/*TESTIMONAL SECTION*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#outerbox{
+  padding: 10px;
+}
+.testinomialexp{
+  margin-left: 15%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.swiper-container {
+  border-radius: 5px;
+  width: 70vw;
+  overflow: hidden;
+  height: fit-content;
+  height: fit-content;
+  font-size: 50px;
+  position: relative;
+  padding-bottom: 50px;
+  font-family: sans-serif;
+}
+
+.swiper-slide {
+  width: auto;
+  height: fit-content;
+  display: flex;
+  height: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px;
+  font-family: Nunito;
+  background-color: white;
+
+}
+
+.swiper-slide .ImgHolder {
+  /* background-color: #4361ee; */
+  background: rgb(213,163,255);
+  background: linear-gradient(90deg, rgba(213,163,255,1) 35%, rgba(119,165,248,1) 100%);
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 30px;
+  border-bottom-left-radius: 20px;
+
+}
+
+.ContentHolder::before {
+  /* background-color: #4361ee; */
+   background: rgb(213,163,255);
+  background: linear-gradient(90deg, rgba(213,163,255,1) 35%, rgba(119,165,248,1) 100%);
+  content: '';
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -5px;
+  z-index: -1;
+  right: 0px;
+}
+
+.ContentHolder {
+  position: relative;
+  padding: 10px;
+  background-color: white;
+  border-top-right-radius: 20px;
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+  opacity: 1;
+  border: 1px solid #e0e2e9;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #d2d5e1;
+}
+
+.swiper-button {
+  border: 1px solid white;
+}
+
+.swiper-slide img {
+  width: 150px;
+  height: 300px;
+  border-radius: 50%;
+  margin: auto;
+  object-fit: cover;
+  border: 3px solid #4361ee;
+  outline: 2px solid white;
+}
+
+.swiper-slide h3 {
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.swiper-slide p {
+  font-size: 0.9rem;
+  padding: 5px;
+}
+
+@media (max-width:638px) {
+  .swiper-container {
+    width: 100%;
+  }
+}
+
+@media (max-width:500px) {
+  .swiper-container {
+    width: 70vw;
+  }
+}
+
+@media (max-width:300px) {
+  .swiper-container {
+    width: 100%;
+  }
+
+  .swiper-slide {
+    border-radius: 0px;
+  }
+
+  .swiper-container .ImgHolder {
+    border-radius: 0px;
+  }
+  .ContentHolder{
+    border-radius: 0px;
+  }
+}
