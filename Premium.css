@@ -1,12 +1,10 @@
-/* Reset Styles */
-  /* Body Styles */
-  /* Wrapper Styles */
+ /* Wrapper Styles */
   .wrapper {
     width: 400px;
     background: #fff;
     border-radius: 16px;
     padding: 30px;
-    margin: auto; /* Add this line to center the box horizontally */
+    margin: auto; 
     margin-top: 50px; 
     box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
   }

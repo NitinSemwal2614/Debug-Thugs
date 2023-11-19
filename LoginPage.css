@@ -214,12 +214,10 @@ body{
     display: none;
   }
 }
-/* Add this to your existing CSS */
+
 body {
     background: #7d2ae8; /* Update background color */
   }
-  
-  /* Update button styles */
   .button input {
     background: #7d2ae8; /* Button background color */
   }
@@ -229,7 +227,6 @@ body {
   }
   
 /* -------------------------------------------------------------- */
-/* Add this to your existing CSS */
 .select-box {
     position: relative;
     width: 100%;
@@ -259,13 +256,12 @@ body {
     color: #7d2ae8;
   }
   
-  /* Adjust the font size and color if needed */
   .select-box option {
     font-size: 16px;
     color: #333;
   }
   
-  /* Optional: Add hover effect */
+
   .select-box:hover select {
     border-color: #7d2ae8;
   }
