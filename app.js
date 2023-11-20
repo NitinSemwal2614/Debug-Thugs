@@ -16,7 +16,7 @@ const upload = multer({ storage: storage });
 
 // Serve the HTML file for the root path
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'pikachu.html'));
 });
 
 // Handle file upload and text input for encryption
