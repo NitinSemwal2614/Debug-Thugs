@@ -9,4 +9,4 @@ A Project by Debug Thugs for the Hackathon..
 7. where you will see that the SignUp/Login Page .
 8. now first signup to the website . and then login with those credentials now .
 9. if you want to check the things then just simply you can use "nitinsemwal" as username and the password "nitin99".
-10. We can locally now deploy our node server for encryption decryption by running npm init -y in app.js terminal and we can see the encryption page getting visible which will return encrypted and decrypted data
+10. We can locally now deploy our node server for encryption decryption by running npm init -y in app.js terminal and then run with node app.js in terminal then we can see the encryption page getting visible which will return encrypted and decrypted data
