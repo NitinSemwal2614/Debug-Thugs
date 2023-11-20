@@ -1,0 +1,340 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Premium.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'Testi.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <!-- Example: Include Swiper JS file -->
+<script src="{% static 'https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js' %}"></script>
+
+    <title>DEBUG THUGS </title>
+</head>
+<body>
+
+    <!-- NAVBAR WORK  -->
+        
+    <div class="navbar">
+      <div class="navbar-left">
+          <img src="{% static 'images/logo.png' %}" alt="Whizz Cryption Logo">
+          <h1>Whizz Cryption</h1>
+      </div>
+      <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+      <div class="navbar-right">
+          <a href="{% url 'Index'%}"><h3>HOME</h3></a>
+          <a href="premium.html"><h3>PREMIUM</h3></a>
+          <a href="{% url 'Login'%}"><h3>LOGIN</h3></a>
+          <a href="{% url 'Login'%}"><h3>REGISTER</h3></a>
+      </div>
+  </div>
+  
+<!-- ENcrypt and Decrypt -->
+<div class="main_1">
+    <div class="container_1">
+        <h4 class="encrypt">Encrypt Data</h4>
+
+        <form class="up_button" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="{{ form.name.id_for_label }}">Name:</label>
+                {{ form.name }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.file.id_for_label }}">File (Choose file):</label>
+                {{ form.file }}
+            </div>
+
+            <input type="submit" value="Submit" class="enter_b">
+        </form>
+ </div>
+</div>
+
+<div class="main_2">
+    <div class="container_2">
+        <h4 class="decrypt">Decrypt Data</h4>
+        <input type="text" id="textbox" placeholder="Enter the particular Key"><br>
+        <br>
+        <button id="download-button" onclick="downloadResult()">Download Result</button>
+    </div>
+  </div>
+  
+  <script>
+    function downloadResult() {
+        // Assuming you have the decrypted data in a variable named 'decryptedData'
+        var decryptedData = "Your decrypted data here team Dubug Thug";
+  
+        // Create a Blob containing the decrypted data
+        var blob = new Blob([decryptedData], { type: 'text/plain' });
+  
+        // Create a link element
+        var a = document.createElement('a');
+  
+        // Set the download attribute with the desired filename
+        a.download = 'decrypted_data.txt';
+  
+        // Create a URL for the Blob and set it as the href attribute of the link
+        a.href = window.URL.createObjectURL(blob);
+  
+        // Append the link to the document body
+        document.body.appendChild(a);
+  
+        // Trigger a click on the link to start the download
+        a.click();
+  
+        // Remove the link from the document
+        document.body.removeChild(a);
+    }
+  </script>
+  
+
+        <!-- Features Section -->
+    <section class="features-section">
+        <h2>Discover the Features</h2>
+        <div class="feature">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Secure Encryption</h3>
+            <p>Learn and apply the latest encryption techniques to keep your data safe and secure.</p>
+        </div>
+        <div class="feature">
+            <i class="fa-solid fa-lightbulb"></i>
+            <h3>Interactive Learning</h3>
+            <p>Engage in interactive lessons and coding challenges to reinforce your skills.</p>
+        </div>
+        <div class="feature">
+            <i class="fa-solid fa-comments-dollar"></i>
+            <h3>Premium Membership</h3>
+            <p>Unlock premium content and personalized guidance with our premium membership.</p>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Section -->
+    <section class="cta-section">
+        <h2>Start Your Coding Journey Today</h2>
+        <p>Join Whizz Cryption and embark on a journey of continuous learning and growth in the world of web development and encryption.</p>
+        <a href="register.html" class="cta-button">Sign Up Now</a>
+    </section>
+
+
+
+        <div class="codepen-wrapper">
+            <figure class="review">
+              <blockquote class="review__text">
+                “There are only two types of 
+                organizations: Those that have been 
+                hacked and those that don't know it 
+                yet!"
+              </blockquote>
+              <figcaption class="review__person">
+                <img src="{% static 'images/John Chamber.jpeg' %}" alt="User 1" class="review__photo">
+                <div class="review__info">
+                  <p class="review__info--name">Nikki Smith</p>
+                  <p class="review__info--date"> April 26, 2020</p>
+                </div>
+                <!-- <div class="review__rating">7.8</div> -->
+              </figcaption>
+            </figure>
+          </div>
+
+
+          <div class="wrapper">
+            <input type="radio" name="slider" id="tab-1">
+            <input type="radio" name="slider" id="tab-2" checked>
+            <input type="radio" name="slider" id="tab-3">
+            <header>
+                <label for="tab-1" class="tab-1">Basic</label>
+                <label for="tab-2" class="tab-2">Professional</label>
+                <label for="tab-3" class="tab-3">Team</label>
+                <div class="slider"></div>
+            </header>
+            <div class="card-area">
+                <div class="cards">
+                    <div class="row row-1">
+                        <div class="price-details">
+                            <span class="price">0</span>
+                            <p>For Basic Use</p>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i><span>100 GB Premium Bandwidth</span></li>
+                            <li><i class="fas fa-check"></i><span>FREE 50+ Installation Scripts WordPress Supported</span></li>
+                            <li><i class="fas fa-check"></i><span>One FREE Domain Registration .com and .np extensions
+                                    only</span></li>
+                            <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="price-details">
+                            <span class="price">0.99</span>
+                            <p>For professional use</p>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i><span>Unlimited GB Premium Bandwidth</span></li>
+                            <li><i class="fas fa-check"></i><span>FREE 200+ Installation Scripts WordPress Supported</span></li>
+                            <li><i class="fas fa-check"></i><span>Five FREE Domain Registration .com and .np extensions
+                                    only</span></li>
+                            <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="price-details">
+                            <span class="price">1.33</span>
+                            <p>For team collaboration</p>
+                        </div>
+                        <ul class="features">
+                            <li><i class="fas fa-check"></i><span>200 GB Premium Bandwidth</span></li>
+                            <li><i class="fas fa-check"></i><span>FREE 100+ Installation Scripts WordPress Supported</span></li>
+                            <li><i class="fas fa-check"></i><span>Two FREE Domain Registration .com and .np extensions
+                                    only</span></li>
+                            <li><i class="fas fa-check"></i><span>Unlimited Email Accounts & Databases</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button>Choose plan</button>
+        </div>
+
+
+        
+<!-- tESTINOMIAL -->
+<div class ="testinomialexp">
+<div id="craouselContainer" class="swiper-container">
+  <div class="swiper-wrapper" id="slideHolder">
+      <!-- Slides -->
+
+  </div>
+  <div class="swiper-pagination"></div>
+  
+</div>
+</div>
+<!-- Footer section -->
+
+
+
+<div class ="Experiment-footer">
+        
+        
+    <!--FONT AWESOME-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+
+<footer>
+<div class="footer">
+<div class="row">
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-instagram"></i></a>
+<a href="#"><i class="fa fa-youtube"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+</div>
+
+<div class="row">
+<ul>
+<li><a href="#">Contact us</a></li>
+<li><a href="#">Our Services</a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Terms & Conditions</a></li>
+<li><a href="#">Career</a></li>
+</ul>
+</div>
+
+<div class="row">
+WhizzCryption Copyright © 2023 Inferno - All rights reserved 
+</div>
+</div>
+</footer>
+</div>
+
+      
+    
+    <!-- Your existing content -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const menuIcon = document.querySelector('.menu-icon');
+          const navbarRight = document.querySelector('.navbar-right');
+  
+          menuIcon.addEventListener('click', function () {
+              navbarRight.classList.toggle('show');
+          });
+      });
+  
+
+
+    /* Testinomial js */
+
+
+
+  var testiomnialData = [
+  {
+      avatar: "https://t4.ftcdn.net/jpg/03/83/25/83/240_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg",
+      name: "Sia Thomas",
+      review: "Whizz Cryption takes data security to the next level, ensuring your sensitive information is stored in an encrypted form, guaranteeing unparalleled protection."
+  },
+  {
+      avatar: "https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg",
+      name: "John Millet",
+      review: "Experience peace of mind with Whizz Cryption, where your data is shielded behind robust encryption, and only you hold the key to unlock and access it securely."
+  },
+  {
+      avatar: "https://t3.ftcdn.net/jpg/02/99/04/20/240_F_299042079_vGBD7wIlSeNl7vOevWHiL93G4koMM967.jpg",
+      name: "Smith Das",
+      review: "Whizz Cryption not only secures your data but empowers you with control by providing a unique key, ensuring that your information remains confidential and accessible only to you."
+  },
+  {
+      avatar: "https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg",
+      name: "Shimmon",
+      review: "Trust in the security of Whizz Cryption, as it encrypts your valuable data and hands you the key, putting you in charge of who gets access to your information."
+  },
+  {
+      avatar: "https://t3.ftcdn.net/jpg/03/02/88/46/240_F_302884605_actpipOdPOQHDTnFtp4zg4RtlWzhOASp.jpg",
+      name:" Kevin Stewart",
+      review: "Your privacy is paramount with Whizz Cryption, which encrypts and safely stores your data, providing you with an exclusive key, giving you the ultimate control over your sensitive information."
+  },
+  {
+      avatar: "https://t4.ftcdn.net/jpg/01/51/99/39/240_F_151993994_mmAYzngmSbNRr6Fxma67Od3WHrSkfG5I.jpg",
+      name: "Marys Lobb",
+      review: "Whizz Cryption sets the gold standard in data protection by encrypting your information and handing you the key, ensuring that only you have the power to unlock and retrieve your data."
+  }, {
+      avatar: "https://t3.ftcdn.net/jpg/02/43/12/34/240_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
+      name: "Jonathan ",
+      review: "With Whizz Cryption, your data is not just stored – it's fortified. The encrypted fortress of your information is in your hands, as Whizz Cryption grants you the exclusive key to access and safeguard your digital assets."
+  }]
+var slideHolder = document.querySelector("#slideHolder")
+for (let i of testiomnialData) slideHolder.innerHTML += `<div class="swiper-slide"> <div class="ImgHolder"><img src="${i.avatar}"></div><div class="ContentHolder"><h3>${i.name}</h3><p>${i.review}</p></div></div>`
+
+const swiper = new Swiper('#craouselContainer', {
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 2.3,
+  loop: true,
+  spaceBetween: 30,
+  effect: "coverflow",
+  coverflowEffect: {
+      rotate: 0,
+      depth: 800,
+      slideShadows: true,
+  },
+  pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+  },
+  autoplay: { delay: 5000 }
+});
+window.onresize = queryResizer
+queryResizer()
+function queryResizer() {
+  if (window.innerWidth < 724) swiper.params.slidesPerView = 2
+  if (window.innerWidth > 501) swiper.params.slidesPerView = 2
+  if (window.innerWidth > 724) swiper.params.slidesPerView = 2.3
+  if (window.innerWidth < 501) swiper.params.slidesPerView = 1
+  swiper.update()
+}
+</script>
+
+</html>
